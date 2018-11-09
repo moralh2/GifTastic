@@ -7,21 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>GifTastic</title>
 
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nova+Mono|Patrick+Hand" rel="stylesheet">    <title>Hello, world!</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- App CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Patrick+Hand|Spicy+Rice" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
-    <title>Hello, world!</title>
-
-    <style>
-
-
-    </style>
+    
 </head>
 
 <body>
@@ -29,6 +21,15 @@
         <div class="row">
             <button type="button" data-emotion="happy" class="btn btn-outline-danger">Happy</button>
             <button type="button" data-emotion="sad" class="btn btn-outline-danger">Sad</button>
+            <button type="button" data-emotion="angry" class="btn btn-outline-danger">Angry</button>
+            <button type="button" data-emotion="Scared" class="btn btn-outline-danger">Scared</button>
+            <button type="button" data-emotion="Drunk" class="btn btn-outline-danger">Drunk</button>
+            <button type="button" data-emotion="Tired" class="btn btn-outline-danger">Tired</button>
+            <button type="button" data-emotion="Confused" class="btn btn-outline-danger">Confused</button>
+            <button type="button" data-emotion="Overwhelmed" class="btn btn-outline-danger">Overwhelmed</button>
+            <button type="button" data-emotion="Overworked" class="btn btn-outline-danger">Overworked</button>
+            <button type="button" data-emotion="Alone" class="btn btn-outline-danger">Alone</button>
+
         </div>
     </div>
 
@@ -36,7 +37,6 @@
         <div id="gif-me" class="row justify-content-center">
 
             <div class="col-sm-4 offset-sm-2">
-
                 <div class="card text-white bg-secondary mb-1">
                     <div class="card-header">
                         <div class="row">
@@ -46,74 +46,47 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-6">G</div>
-                            <div class="col-sm-6 text-right">WILLANDGRACE</div>
+                            <div class="col-sm-6 datetime">pg</div>
+                            <div class="col-sm-6 text-right datetime">willandgrace</div>
                         </div>
                     </div>
                 </div>
-
                 <div class="card text-white bg-primary mb-1">
                     <div class="card-header text-right">title</div>
                     <div class="card-body">
-                        <p class="card-text text-right text-uppercase">happy fresh prince gif by nick at nite</p>
+                        <p class="card-text text-right text-uppercase">happy megan mullally GIF by Will &amp; Grace</p>
                     </div>
                 </div>
-
                 <div class="card text-white bg-dark mb-1">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-sm-6">imported</div>
-                            <div class="col-sm-6 text-right">trending</div>
+                            <div class="col-sm-6">date imported</div>
+                            <div class="col-sm-6 text-right">last trending</div>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-6 datetime">2018-11-09</div>
-                            <div class="col-sm-6 text-right datetime">2018-11-09 12:00:01</div>
+                            <div class="col-sm-6 datetime">2017-09-29</div>
+                            <div class="col-sm-6 text-right datetime">2018-11-08</div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-            <div class="col-sm-6">
-
-
-                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
-                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+            <div class="col-sm-6 mb-4">
+                <img class="gif" src="https://media1.giphy.com/media/3ov9jEKWFGKZVYsxPy/200.gif?cid=e1bb72ff5be5504e384f3873679a7278"
+                    data-still="https://media1.giphy.com/media/3ov9jEKWFGKZVYsxPy/200_s.gif?cid=e1bb72ff5be5504e384f3873679a7278"
+                    data-animate="https://media1.giphy.com/media/3ov9jEKWFGKZVYsxPy/200.gif?cid=e1bb72ff5be5504e384f3873679a7278"
+                    data-state="animate">
             </div>
 
         </div>
     </div>
 
-
-    <!-- 
-            <div class="col-sm-9 mt-3 mb-3">
-                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
-                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
-            </div> -->
-    <!-- 
-            <div class="col-sm-12 mt-3 mb-3">
-                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
-                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
-            </div>
-
-            <div class="col-sm-12 mt-3 mb-3">
-                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
-                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
-            </div> -->
-
-    </div>
-    </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- App JavaScript -->
     <script src="assets/javascript/app.js"></script>
 
