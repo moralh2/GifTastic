@@ -2,21 +2,40 @@ body {
     background-image: url("../images/bg-purple-gradient.png");
 }
 button {
-    font-family: 'Spicy Rice', cursive;
+    font-family: 'Patrick Hand', cursive;
+
 }
 .card-header {
     padding: .2rem .2rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    font-style: italic;
+    font-weight: 900;
+    font-family: 'Nova Mono', monospace;
+    text-shadow: 2px 2px 0 #000;
 }
-.card-header, .datetime {
-    font-family: 'Inconsolata', monospace;
+.datetime {
+    /* font-size: 0.8rem; */
+
 }
 .card-body {
-    font-family: 'Patrick Hand', cursive;
+    /* font-family: 'Patrick Hand', cursive; */
+    /* font-family: 'Spicy Rice', cursive; */
+    /* font-family: 'Patrick Hand', cursive; */
+    font-family: 'Inconsolata', monospace;
+
+
+    line-height: 1.4rem;
     padding: .2rem .2rem;
     font-size: 1.0rem;
+    /* font-size: 0.8rem; */
+
 }
 img, .card {
     border: .2rem solid indigo;
     padding: 0;
 }
+.card {
+    margin-right: -1.8rem;
+}
+
