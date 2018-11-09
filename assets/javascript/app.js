@@ -1,5 +1,6 @@
 $("button").on("click", function () {
     var emotion = $(this).attr("data-emotion");
+    // var api_key = "Xn6YqGd64F2yEYT65oUuwsZkVPMF0ocO"
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         emotion + "&api_key=dc6zaTOxFJmzC&limit=10";
     $.ajax({
@@ -12,6 +13,7 @@ $("button").on("click", function () {
 })
 
 function handleResponse(results) {
+    $("#gif-me").empty();
     for (var i = 0; i < results.length; i++) {
         var gifDiv = $("<div>");
         gifDiv.addClass("col-sm-12")

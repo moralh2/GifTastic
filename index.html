@@ -13,37 +13,111 @@
     <!-- App CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Patrick+Hand|Spicy+Rice" rel="stylesheet">
+
     <title>Hello, world!</title>
+
+    <style>
+        body {
+            /* background-image: url("../images/futu-blue-bg.png"); */
+            background-image: url("assets/images/bg-purple-gradient.png");
+
+        }
+        button {
+            /* font-family: 'Spicy Rice', cursive; */
+            font-family: 'Patrick Hand', cursive;
+
+        }
+        .card-header {
+            padding: .2rem .2rem;
+            font-size: 0.5rem;
+        }
+        .card-header, .datetime {
+            font-family: 'Inconsolata', monospace;
+        }
+        .card-body {
+            font-family: 'Patrick Hand', cursive;
+            padding: .2rem .2rem;
+            font-size: .75rem;
+        }
+
+    </style>
 </head>
 
 <body>
     <div class="container mt-2 mb-4">
-        <div class="row-fluid">
-            <div class="col-sm-12">
-                <button type="button" data-emotion="happy" class="btn btn-outline-danger">Happy</button>
-                <button type="button" data-emotion="sad" class="btn btn-outline-danger">Sad</button>
-            </div>
+        <div class="row">
+            <!-- <div class="col-md-12"> -->
+            <button type="button" data-emotion="happy" class="btn btn-outline-danger">Happy</button>
+            <button type="button" data-emotion="sad" class="btn btn-outline-danger">Sad</button>
+            <!-- </div> -->
         </div>
     </div>
 
     <div class="container">
-        <div id="gif-me" class="row-fluid">
-            <div class="col-sm-12 mt-3 mb-3">
-                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
-                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
-            </div>
+        <div id="gif-me" class="row justify-content-center">
 
-            <div class="col-sm-12 mt-3 mb-3">
-                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
-                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
-            </div>
+            <div class="col-sm-4 offset-sm-2">
 
-            <div class="col-sm-12 mt-3 mb-3">
+                <!-- <div class="card text-white bg-dark mb-3" style="max-width: 18rem;"> -->
+                <div class="card bg-light mb-1">
+                    <div class="card-header text-right">rating</div>
+                    <div class="card-body">
+                        <p class="card-text text-right">G</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-primary mb-1">
+                    <div class="card-header text-right">title</div>
+                    <div class="card-body">
+                        <p class="card-text text-right text-uppercase">happy fresh prince gif by nick at nite</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-secondary mb-1">
+                    <div class="card-header text-right">trending datetime</div>
+                    <div class="card-body">
+                        <p class="card-text text-right datetime">2018-11-09 12:00:01</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-dark mb-1">
+                    <div class="card-header text-right">username</div>
+                    <div class="card-body">
+                        <p class="card-text text-right text-uppercase">willandgrace</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+
+
                 <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
                     data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
             </div>
 
         </div>
+    </div>
+
+
+    <!-- 
+            <div class="col-sm-9 mt-3 mb-3">
+                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
+                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+            </div> -->
+    <!-- 
+            <div class="col-sm-12 mt-3 mb-3">
+                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
+                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+            </div>
+
+            <div class="col-sm-12 mt-3 mb-3">
+                <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
+                    data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+            </div> -->
+
+    </div>
     </div>
 
     <!-- Optional JavaScript -->
