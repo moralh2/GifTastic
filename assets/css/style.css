@@ -1,0 +1,22 @@
+body {
+    background-image: url("../images/bg-purple-gradient.png");
+}
+button {
+    font-family: 'Spicy Rice', cursive;
+}
+.card-header {
+    padding: .2rem .2rem;
+    font-size: 0.9rem;
+}
+.card-header, .datetime {
+    font-family: 'Inconsolata', monospace;
+}
+.card-body {
+    font-family: 'Patrick Hand', cursive;
+    padding: .2rem .2rem;
+    font-size: 1.0rem;
+}
+img, .card {
+    border: .2rem solid indigo;
+    padding: 0;
+}
