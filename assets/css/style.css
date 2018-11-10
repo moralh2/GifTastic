@@ -22,3 +22,7 @@ tr {
 #title-message {
     font-size: 2rem;
 }
+.bgo {
+    background:rgba(8, 8, 8, 0.527);
+    padding-top: 1.20rem;
+}

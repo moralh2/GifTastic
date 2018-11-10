@@ -33,6 +33,7 @@ $("#add-new-btn").on("click", function (event) {
     console.log(newBtnVal)
     if (topics.indexOf(newBtnVal) == -1) {
         topics.push(newBtnVal)
+        $("#new-btn-input").val("")
         loadGifButtons()
     }
 })
@@ -46,11 +47,11 @@ function handleResponse(results) {
             'username': results[i].username,
             'imported': results[i].import_datetime.substring(0,10),
             'trending': results[i].trending_datetime.substring(0,10),
-            'source': results[i].source_tld,
-            'eurl': results[i].images.fixed_height.url,
-            'slug': results[i].slug
+            'source': results[i].source_tld
+            // 'eurl': results[i].url,
+            // 'slug': results[i].slug
         }
-        var dataRow = $("<div>").addClass("row mt-4")
+        var dataRow = $("<div>").addClass("row mt-4 bgo")
         var dataDiv = createDataDiv(data)
         var gifDiv = $("<div>").addClass("col-lg-3 offset-lg-1 col-md-12 mb-3")
         var emotionImage = $("<img>").addClass("gif img-fluid rounded mx-auto d-block")
@@ -91,12 +92,12 @@ function createDataDiv(data) {
             tbody.append(row)
         }
     }
-    // var row = $("<tr>")
+    var row = $("<tr>")
     // row.html('<a href="'+ data.eurl +'" download>DL</a>')
-    // var link = $("<a>")
-    // link.attr('href', data.eurl).attr('download', data.eurl).text('DL')
-    // row.append(link)
-    // tbody.append(row)
+    // // var link = $("<a>")
+    // // link.attr('href', data.eurl).attr('download', data.eurl).text('DL')
+    // // row.append(link)
+    tbody.append(row)
 
     table.append(tbody)
     tableDiv.append(table)
