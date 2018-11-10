@@ -6,10 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>GifTastic</title>
-
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nova+Mono|Patrick+Hand" rel="stylesheet">
-    <title>Hello, world!</title>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Patrick+Hand" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -24,21 +22,20 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="p-3 m-4 bg-danger text-white title-message">
+                <!-- Intructions for the app -->
                 <div id="title-message">How are you feeling?</div>
                 <div>If you're not sure, you can press one of the buttons below to see gifs for that emotion 🧐🔎</div>
                 <div>Or you can add a new button with an emotion (or random word) not already listed 😉🎯</div>
-
+                <!-- Form for inputting their own btn -->
                 <form class="p-3 form-inline">
                     <div class="form-group mx-sm-3 mb-1">
                         <input id="new-btn-input" type="text" class="form-control" id="newEmotion" placeholder="Enter text here">
                     </div>
                     <button id="add-new-btn" type="submit" class="btn btn-primary mb-1">Add</button>
                 </form>
-
             </div>
         </div>
     </div>
-
 
     <div class="container">
         <div class="row justify-content-center mt-2 mb-4 ml-2">
@@ -46,16 +43,9 @@
                 <!-- All the btns are loaded here -->
             </div>
             <div id="load-more" class="col-md-12 text-center">
-                <!-- All the btns are loaded here -->
+                <!-- load more btn -->
             </div>
         </div>
-    </div>
-
-    <div id="load-more" class="container">
-        <div id="load-more" class="col-md-12 text-center">
-            <!-- All the btns are loaded here -->
-        </div>
-        <!-- Bnt to load 10 more -->
     </div>
 
     <div id="gif-me" class="container mb-4">
