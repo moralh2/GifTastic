@@ -22,6 +22,10 @@ function loadGifButtons() {
                 console.log(response);
                 handleResponse(response.data)
             })
+            var loadMore = $("#load-more")
+            loadMore.empty()
+            var btn2 = $("<button>").addClass("btn btn-danger mr-2").text("load 10 more")
+            $("#load-more").append(btn2)
             // set pagination to 1
             // add new button (+) before gifs (10+)
             // add event for click
@@ -33,13 +37,8 @@ function loadGifButtons() {
         btnDiv.append(btn)
     }
 
-    var btn2 = $("<button>").addClass("btn btn-danger mr-2").text("load 10 more")
-        btn2.on("click", function () {
-         // paginate ++
-         // 
-        })
-        btnDiv.append(btn)
 }
+
 
 $("#add-new-btn").on("click", function (event) {
     event.preventDefault();
