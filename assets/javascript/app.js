@@ -1,36 +1,54 @@
-$(document).ready(function() { 
+$(document).ready(function () {
     loadGifButtons()
 })
 
 var topics = ["happy", "sad", "angry", "overwhelmed", "scared", "drunk", "tired", "stressed", "confused", "overworked", "lonely", "ashamed", "excited", "crazy", "amused", "impressed", "shocked", "sick", "annoyed", "pensive", "proud"]
+var pagination = 0
+console.log("init------\n"+pagination+"\n------\n")
+
+function callAPI(keyword) {
+    console.log("api_call------\n"+pagination+"\n------\n")
+
+    var api_key = "Xn6YqGd64F2yEYT65oUuwsZkVPMF0ocO"
+    // var api_key = "dc6zaTOxFJmzC"
+    var offset = pagination * 10
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        keyword + "&api_key=" + api_key + "&offset=" + offset + "&limit=10";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        handleResponse(response.data)
+    })
+}
 
 function loadGifButtons() {
     var btnDiv = $("#gif-buttons")
+    pagination = 1
     btnDiv.empty()
     for (var i in topics) {
         var btn = $("<button>").addClass("btn btn-outline-danger mr-2 mb-2").attr("data-emotion", topics[i]).text(topics[i])
         btn.on("click", function () {
+            $("#gif-me").empty();
             var emotion = $(this).attr("data-emotion")
-            var api_key = "Xn6YqGd64F2yEYT65oUuwsZkVPMF0ocO"
-            // var api_key = "dc6zaTOxFJmzC"
-            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-                emotion + "&api_key=" + api_key + "&limit=10";
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            }).then(function (response) {
-                console.log(response);
-                handleResponse(response.data)
-            })
+            callAPI(emotion)
+                            
             var loadMore = $("#load-more")
             loadMore.empty()
             var btn2 = $("<button>").addClass("btn btn-danger mr-2").text("load 10 more")
+            btn2.on("click", function() {
+                console.log("from-loadmore------\n"+pagination+"\n------\n")
+
+                pagination++
+                callAPI(emotion)
+            })
             $("#load-more").append(btn2)
             // set pagination to 1
             // add new button (+) before gifs (10+)
             // add event for click
-                // call fnc to request 10 more
-                // --- change fncs
+            // call fnc to request 10 more
+            // --- change fncs
             // add small text under btns (explain the +)
 
         })
@@ -52,14 +70,13 @@ $("#add-new-btn").on("click", function (event) {
 })
 
 function handleResponse(results) {
-    $("#gif-me").empty();
     for (var i = 0; i < results.length; i++) {
         data = {
             'title': results[i].title,
             'rating': results[i].rating,
             'username': results[i].username,
-            'imported': results[i].import_datetime.substring(0,10),
-            'trending': results[i].trending_datetime.substring(0,10),
+            'imported': results[i].import_datetime.substring(0, 10),
+            'trending': results[i].trending_datetime.substring(0, 10),
             'source': results[i].source_tld
             // 'eurl': results[i].url,
             // 'slug': results[i].slug
@@ -86,7 +103,7 @@ function handleResponse(results) {
         gifDiv.prepend(emotionImage);
         dataRow.append(gifDiv);
         dataRow.append(dataDiv);
-        $("#gif-me").append(dataRow);
+        $("#gif-me").prepend(dataRow);
     }
 }
 
