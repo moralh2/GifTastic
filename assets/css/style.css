@@ -5,41 +5,14 @@ button {
     font-family: 'Patrick Hand', cursive;
 
 }
-.card-header, .table-header {
-    padding: .2rem .2rem;
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    font-style: italic;
-    font-weight: 900;
-    font-family: 'Nova Mono', monospace;
-    text-shadow: 2px 2px 0 #000;
-}
-.datetime {
-    /* font-size: 0.8rem; */
-
-}
-.card-body {
-    font-family: 'Inconsolata', monospace;
-    line-height: 1.4rem;
-    padding: .2rem .2rem;
-    font-size: 1.0rem;
-}
-.card {
-    border: .2rem solid indigo;
-    /* padding: 0; */
-}
-
 img {
-    border: .3rem solid rgb(147, 58, 211);
-    /* padding: 0; */
+    border: .4rem solid #dc3546af;
 }
-
-th, tr {
-    font-family: 'Inconsolata', monospace;
+th {
+    font-family: 'Nova Mono', monospace;
+    font-size: 0.7rem;
+}
+tr {
+    font-family: 'Patrick Hand', cursive;
     font-size: 0.8rem;
-
 }
-/* .card {
-    margin-right: -1.8rem;
-} */
-
