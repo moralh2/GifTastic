@@ -56,7 +56,7 @@ $("#add-new-btn").on("click", function (event) {
 
 function handleResponse(results) {
     var wrapperWrapper = $("<div>").addClass("row")
-    var wrapper = $("<div>").addClass("collapse show multi-collapse col-md-12").attr('id', 'gifCollapseDiv' + pagination)
+    var wrapper = $("<div>").addClass("collapse show multi-collapse col-md-12 mb-4").attr('id', 'gifCollapseDiv' + pagination)
     for (var i = 0; i < results.length; i++) {
         data = {
             'title': results[i].title,
