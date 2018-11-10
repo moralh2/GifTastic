@@ -6,8 +6,7 @@ var topics = ["happy", "sad", "angry", "overwhelmed", "scared", "drunk", "tired"
 var pagination = 0
 
 function callAPI(keyword) {
-    var api_key = "Xn6YqGd64F2yEYT65oUuwsZkVPMF0ocO"
-    // var api_key = "dc6zaTOxFJmzC"
+    var api_key = "dc6zaTOxFJmzC"
     var offset = pagination * 10
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         keyword + "&api_key=" + api_key + "&offset=" + offset + "&limit=10";
@@ -31,11 +30,10 @@ function loadGifButtons() {
             var emotion = $(this).attr("data-emotion")
             pagination = 0
             callAPI(emotion)
-                            
             var loadMore = $("#load-more")
             loadMore.empty()
-            var btn2 = $("<button>").addClass("btn btn-danger m-4").text("load 10 more")
-            btn2.on("click", function() {
+            var btn2 = $("<button>").addClass("btn btn-danger mt-2").text("load 10 more")
+            btn2.on("click", function () {
                 pagination++
                 callAPI(emotion)
             })
@@ -58,8 +56,7 @@ $("#add-new-btn").on("click", function (event) {
 
 function handleResponse(results) {
     var wrapperWrapper = $("<div>").addClass("row")
-    var wrapper = $("<div>").addClass("collapse show multi-collapse col-md-12").attr('id', 'gifCollapseDiv'+pagination)
-
+    var wrapper = $("<div>").addClass("collapse show multi-collapse col-md-12").attr('id', 'gifCollapseDiv' + pagination)
     for (var i = 0; i < results.length; i++) {
         data = {
             'title': results[i].title,
@@ -93,28 +90,23 @@ function handleResponse(results) {
         wrapper.append(dataRow)
     }
     wrapperWrapper.append(wrapper)
-
-    var collapsaBtn = $('<a>').addClass("btn btn-primary btn-sm mb-2")
+    var collapsaBtn = $('<a>').addClass("btn btn-outline-primary btn-sm ml-2 mb-2")
     collapsaBtn.attr("data-toggle", "collapse")
-    collapsaBtn.attr("href", "#gifCollapseDiv"+pagination)
+    collapsaBtn.attr("href", "#gifCollapseDiv" + pagination)
     collapsaBtn.attr("role", "button")
     collapsaBtn.attr("aria-expanded", "false")
-    var indeces = [ String((pagination)*10+1), String((pagination+1)*10) ]
+    var indeces = [String((pagination) * 10 + 1), String((pagination + 1) * 10)]
     console.log(indeces[0].length)
     console.log(indeces[1].length)
-    if (indeces[0].length < indeces[1].length) { 
+    if (indeces[0].length < indeces[1].length) {
         indeces[0] = "0" + indeces[0]
     }
-    collapsaBtn.text("  "+indeces[0]+"-"+indeces[1])
+    collapsaBtn.text("  " + indeces[0] + "-" + indeces[1])
     var collapseIcon1 = $("<i>").addClass("fas fa-caret-up")
     var collapseIcon2 = $("<i>").addClass("fas fa-caret-down")
     collapsaBtn.prepend(collapseIcon2).prepend(collapseIcon1)
-
-    // collapsaBtn.append(collapseIcons)
-    // collapsaBtn.text("1-10")
     var collDiv = $('<div>').addClass("col-md-12 text-center")
     collDiv.append(collapsaBtn)
-
     wrapperWrapper.prepend(collDiv)
     $("#gif-me").prepend(wrapperWrapper);
 }
@@ -135,12 +127,7 @@ function createDataDiv(data) {
         }
     }
     var row = $("<tr>")
-    // row.html('<a href="'+ data.eurl +'" download>DL</a>')
-    // // var link = $("<a>")
-    // // link.attr('href', data.eurl).attr('download', data.eurl).text('DL')
-    // // row.append(link)
     tbody.append(row)
-
     table.append(tbody)
     tableDiv.append(table)
     dataDiv.append(tableDiv)
