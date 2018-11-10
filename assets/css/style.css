@@ -16,3 +16,9 @@ tr {
     font-family: 'Patrick Hand', cursive;
     font-size: 0.8rem;
 }
+.title-message {
+    font-family: 'Patrick Hand', cursive;
+}
+#title-message {
+    font-size: 2rem;
+}
