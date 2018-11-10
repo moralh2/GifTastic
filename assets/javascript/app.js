@@ -2,7 +2,7 @@ $(document).ready(function() {
     loadGifButtons()
 })
 
-var topics = ["happy", "sad", "angry", "scared", "drunk", "tired", "confused", "overwhelmed", "overworked", "stressed", "lonely", "ashamed", "excited", "crazy", "amused", "impressed", "shocked", "sick"]
+var topics = ["happy", "sad", "angry", "overwhelmed", "scared", "drunk", "tired", "stressed", "confused", "overworked", "lonely", "ashamed", "excited", "crazy", "amused", "impressed", "shocked", "sick", "annoyed", "pensive", "proud"]
 
 function loadGifButtons() {
     var btnDiv = $("#gif-buttons")
@@ -46,7 +46,9 @@ function handleResponse(results) {
             'username': results[i].username,
             'imported': results[i].import_datetime.substring(0,10),
             'trending': results[i].trending_datetime.substring(0,10),
-            'source': results[i].source_tld
+            'source': results[i].source_tld,
+            'eurl': results[i].images.fixed_height.url,
+            'slug': results[i].slug
         }
         var dataRow = $("<div>").addClass("row mt-4")
         var dataDiv = createDataDiv(data)
@@ -81,12 +83,20 @@ function createDataDiv(data) {
     var tbody = $("<tbody>")
 
     for (var key in data) {
-        var row = $("<tr>")
-        var head = $("<th>").addClass("text-right").attr("scope", "row").text(key)
-        var dataR = $("<td>").text(data[key])
-        row.append(head).append(dataR)
-        tbody.append(row)
+        if (key != 'eurl' && key != 'slug') {
+            var row = $("<tr>")
+            var head = $("<th>").addClass("text-right").attr("scope", "row").text(key)
+            var dataR = $("<td>").text(data[key])
+            row.append(head).append(dataR)
+            tbody.append(row)
+        }
     }
+    // var row = $("<tr>")
+    // row.html('<a href="'+ data.eurl +'" download>DL</a>')
+    // var link = $("<a>")
+    // link.attr('href', data.eurl).attr('download', data.eurl).text('DL')
+    // row.append(link)
+    // tbody.append(row)
 
     table.append(tbody)
     tableDiv.append(table)
