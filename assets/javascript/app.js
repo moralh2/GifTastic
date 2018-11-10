@@ -2,7 +2,7 @@ $(document).ready(function () {
     loadGifButtons()
 })
 
-var topics = ["happy", "sad", "angry", "overwhelmed", "scared", "drunk", "tired", "stressed", "confused", "overworked", "lonely", "ashamed", "excited", "crazy", "amused", "impressed", "shocked", "sick", "annoyed", "pensive", "proud"]
+var topics = ["happy", "sad", "angry", "overwhelmed", "scared", "drunk", "tired", "stressed", "confused", "overworked", "lonely", "ashamed", "excited", "crazy", "amused", "impressed", "shocked", "sick", "annoyed", "pensive", "proud", "content", "bored", "worried"]
 var pagination = 0
 
 function callAPI(keyword) {
