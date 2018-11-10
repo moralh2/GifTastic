@@ -19,15 +19,26 @@
 
 <body>
     <div class="container">
-        <div class="p-3 m-4 bg-danger text-white title-message">
-                <div id="title-message">How are you feeling?</div>
-                <div>If you're not sure, you can press one of the buttons below to see gifs for that emotion 🧐🔎</div>
+        <div class="row justify-content-center">
+                <div class="p-3 m-4 bg-danger text-white title-message">
+                        <div id="title-message">How are you feeling?</div>
+                        <div>If you're not sure, you can press one of the buttons below to see gifs for that emotion 🧐🔎</div>
+                        <div>Or you can add a new button with an emotion (or random word) not already listed 😉🎯</div>
 
+                        <form class="p-3 form-inline">
+                                <div class="form-group mx-sm-3 mb-1">
+                                    <input id= "new-btn-input" type="text" class="form-control" id="newEmotion" placeholder="Enter text here">
+                                </div>
+                                <button id="add-new-btn" type="submit" class="btn btn-primary mb-1">Add</button>
+                        </form>
+    
+                </div>
         </div>
-
     </div>
+
+    
     <div class="container">
-        <div  class="row justify-content-center mt-2 mb-4 ml-2">
+        <div class="row justify-content-center mt-2 mb-4 ml-2">
             <div id="gif-buttons" class="col-md-12">
                 <!-- All the btns are loaded here -->
             </div>

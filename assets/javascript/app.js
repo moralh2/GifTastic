@@ -27,6 +27,16 @@ function loadGifButtons() {
     }
 }
 
+$("#add-new-btn").on("click", function (event) {
+    event.preventDefault();
+    var newBtnVal = $("#new-btn-input").val().trim().toLowerCase()
+    console.log(newBtnVal)
+    if (topics.indexOf(newBtnVal) == -1) {
+        topics.push(newBtnVal)
+        loadGifButtons()
+    }
+})
+
 function handleResponse(results) {
     $("#gif-me").empty();
     for (var i = 0; i < results.length; i++) {
