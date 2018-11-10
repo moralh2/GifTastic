@@ -5,7 +5,7 @@ button {
     font-family: 'Patrick Hand', cursive;
 
 }
-.card-header {
+.card-header, .table-header {
     padding: .2rem .2rem;
     font-size: 0.8rem;
     line-height: 1.5rem;
@@ -19,23 +19,27 @@ button {
 
 }
 .card-body {
-    /* font-family: 'Patrick Hand', cursive; */
-    /* font-family: 'Spicy Rice', cursive; */
-    /* font-family: 'Patrick Hand', cursive; */
     font-family: 'Inconsolata', monospace;
-
-
     line-height: 1.4rem;
     padding: .2rem .2rem;
     font-size: 1.0rem;
-    /* font-size: 0.8rem; */
-
-}
-img, .card {
-    border: .2rem solid indigo;
-    padding: 0;
 }
 .card {
-    margin-right: -1.8rem;
+    border: .2rem solid indigo;
+    /* padding: 0; */
 }
+
+img {
+    border: .3rem solid rgb(147, 58, 211);
+    /* padding: 0; */
+}
+
+th, tr {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.8rem;
+
+}
+/* .card {
+    margin-right: -1.8rem;
+} */
 
