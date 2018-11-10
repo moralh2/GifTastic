@@ -26,3 +26,6 @@ tr {
     background:rgba(8, 8, 8, 0.527);
     padding-top: 1.20rem;
 }
+.btn-sm {
+    font-size: 0.4rem;
+}
